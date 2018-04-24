@@ -40,10 +40,10 @@
 		607FACE51AFB9204008FA782 /* WebImage_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebImage_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		75114BB93A6EAFBDC8C0D561 /* WebImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WebImage.podspec; path = ../WebImage.podspec; sourceTree = "<group>"; };
+		75114BB93A6EAFBDC8C0D561 /* WebImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WebImage.podspec; path = ../WebImage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		83C107CE276E5484E1B996FF /* Pods-WebImage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebImage_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A04E3817356EEFD36475DF91 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A834E484BF7DB1660D53E98E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A04E3817356EEFD36475DF91 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A834E484BF7DB1660D53E98E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BF6068CA106A9C077D88D202 /* Pods-WebImage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebImage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebImage_Tests/Pods-WebImage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBD568A59F97B1D8FFC0DC52 /* Pods-WebImage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebImage_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebImage_Tests/Pods-WebImage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DCCD56CDCB33CA0482759F0B /* Pods-WebImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebImage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,11 +304,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/KingfisherWebP/KingfisherWebP.framework",
 				"${BUILT_PRODUCTS_DIR}/WebImage/WebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KingfisherWebP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -469,6 +475,11 @@
 			baseConfigurationReference = 83C107CE276E5484E1B996FF /* Pods-WebImage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WebImage",
+				);
 				INFOPLIST_FILE = WebImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -484,6 +495,11 @@
 			baseConfigurationReference = DCCD56CDCB33CA0482759F0B /* Pods-WebImage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WebImage",
+				);
 				INFOPLIST_FILE = WebImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

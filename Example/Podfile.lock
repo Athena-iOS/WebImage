@@ -1,0 +1,55 @@
+PODS:
+  - Kingfisher (4.5.0)
+  - KingfisherWebP (0.3.1):
+    - Kingfisher (~> 4.0)
+    - libwebp
+  - libwebp (0.6.0):
+    - libwebp/core (= 0.6.0)
+    - libwebp/dec (= 0.6.0)
+    - libwebp/demux (= 0.6.0)
+    - libwebp/dsp (= 0.6.0)
+    - libwebp/enc (= 0.6.0)
+    - libwebp/mux (= 0.6.0)
+    - libwebp/utils (= 0.6.0)
+    - libwebp/webp (= 0.6.0)
+  - libwebp/core (0.6.0):
+    - libwebp/webp
+  - libwebp/dec (0.6.0):
+    - libwebp/core
+  - libwebp/demux (0.6.0):
+    - libwebp/core
+  - libwebp/dsp (0.6.0):
+    - libwebp/core
+  - libwebp/enc (0.6.0):
+    - libwebp/core
+  - libwebp/mux (0.6.0):
+    - libwebp/core
+  - libwebp/utils (0.6.0):
+    - libwebp/core
+  - libwebp/webp (0.6.0)
+  - WebImage (0.1.0):
+    - Kingfisher (~> 4.5.0)
+    - KingfisherWebP (~> 0.3.1)
+
+DEPENDENCIES:
+  - WebImage (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+    - KingfisherWebP
+    - libwebp
+
+EXTERNAL SOURCES:
+  WebImage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  KingfisherWebP: 1d80d4f9541e37df02cf050a3c8a7902d3e1b940
+  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
+  WebImage: 48d79edce4987114370394792bdf5a5164bb0321
+
+PODFILE CHECKSUM: b8e66050054f85b28f1391023f2399699c6d416a
+
+COCOAPODS: 1.5.0
